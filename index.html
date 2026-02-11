@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script src="https://api4.windy.com/assets/libBoot.js"></script>
+  	<style>
+  		#windy {
+  			width: 100%;
+  			height: 1024px;
+  		}
+  	</style>
+  </head>
+  <body>
+    <div id="windy"></div>
+
+    <script>
+
+    const options = {
+
+                // Required: API key
+                key: 'Xy12BgT43A3Nwx1rv36z6kFJDlfpPXkj',
+
+                // Put additional console output
+                verbose: true,
+
+                // Optional: Initial state of the map
+                lat: 33.83122,
+                lon: -87.27751,
+                zoom: 5,
+        }
+
+    // Initialize Windy API
+    windyInit( options, windyAPI => {
+        // windyAPI is ready, and contain 'map', 'store',
+        // 'picker' and other usefull stuff
+
+        const { map } = windyAPI
+        // .map is instance of Leaflet map
+
+        //L.popup()
+            //.setLatLng([33.83122, -87.27751])
+            //.setContent("Hello World")
+            //.openOn( map );
+
+    })
+
+    </script>
+
+  </body>
+</html>
